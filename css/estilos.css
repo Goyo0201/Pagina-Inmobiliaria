@@ -1,0 +1,437 @@
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+
+img{
+    max-width: 100%; /*imagenes utilizan el 100% del contenedor donde esten*/
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.contenido-centrado{
+    max-width: 80rem;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+h4{
+    font-size: 2.6rem;
+}
+
+
+
+/*Utilidades*/
+.seccion{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.centrar-texto{
+    text-align: center; /*utilidad centrar texto*/
+}
+
+.fw-300{
+    font-weight: 300; /*Definir ancho del texto*/
+}
+
+.d-block{
+    display: block !important;
+}
+
+/* header*/
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    background: url(../img/header.jpg);
+    height: 100vh; /*viewport height*/
+    min-height: 60rem;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.contenido-header h1{
+    color: rgb(255, 255, 255);
+    max-width: 60rem;
+    padding-bottom: 3rem;
+    line-height: 2;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    align-items: center;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+}
+
+/*pseudoselector*/
+
+.navegacion a:last-of-type{
+    margin-right: 0;
+
+}
+
+.navegacion a:hover{ /*para cambar el color cuaando se pase el cursor*/
+    color: blue;
+}
+
+
+/*mas sobre nosotros*/
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono{
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+.icono h3{
+    text-transform: uppercase; /*cambiar texto de minuscula a mayuscula*/
+}
+
+/*casas y apartamentos en venta*/
+
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;/*se organiza el contenido en 2 lineas*/
+}
+
+.anuncio{
+    flex-grow: 0; /*factor de crecimiento*/
+    flex-shrink: 0; /*factor de encojimiento*/
+    flex-basis: calc(33.3% - 1rem);
+    border-style: solid; /*colocar borde*/
+    border-color: #b5b5b5; /*Color del borde*/
+    border-width: .1rem; /*Ancho del borde*/
+    background-color: #f5f5f5;
+    margin-bottom: 2rem; /*espacio de abajo entre contenidos*/
+}
+
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, .contenido-anuncio p{
+    margin: 0; /*eliminar margenes de los textos*/
+}
+
+.precio{
+    color: #71b100;
+    font-weight: 700; /*cambiar ancho del texto*/
+}
+
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li{
+    display: flex;
+}
+
+.iconos-caracteristicas li img{
+    margin-right: 2rem;
+}
+
+.boton{
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none; /*quitar linea debajo del texto*/
+    font-size: 1.8rem;
+    padding: 1rem 3rem; /*1 rem parte superior e inferior y 3 rem parte derecha e izquierda*/
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-amarillo{
+    background-color: #e08709;
+}
+
+.boton-verde{
+    background-color: #71b100;
+}
+
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*contacto*/
+
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.contenido-contacto{
+    flex: 1; /*factor de crecimiento*/
+    color: #ffffff;
+}
+
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+
+
+/*seccion inferior*/
+
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog .imagen-entrada{
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada h4{
+    margin: 0; /*borrar margen del texto*/
+    line-height: 1.4; /*interlineado*/
+
+}
+
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+
+/*pseudoelementos*/
+
+.texto-entrada h4::after{
+    content: "";
+    display: block;
+    background-color: #71b100;
+    width: 15rem;
+    height: .5rem;
+    margin-top: 1rem;
+}
+
+.texto-entrada span{
+    color: #e08709;
+}
+
+.testimonial{
+    background-color: #71b100;
+    border-radius: 2rem; /* colocarle el mismo radio a los bordes de las esquinas*/
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+
+    /*border-top-left-radius: 3rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;*/
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote{
+    font-weight: 300;
+    padding-left: 5rem;
+}
+
+.testimonial blockquote::before{
+    content: "";
+    background-image: url(../img/comilla.svg);
+    display: block;
+    width: 5rem;
+    height: 5rem;
+}
+
+/*footer*/
+
+.site-footer{
+    background-color: #333333;
+}
+
+.contenido-footer{
+    display: flex;
+    justify-content: space-between; /*coloca los contenidos uno a cada extremo*/
+    padding: 3rem;
+    align-items: center;
+}
+
+.copyright{
+    color: #ffffff;
+}
+
+/*DOCUMENTO NOSOTROS*/
+.contenedor-nosotros{
+    display: grid;
+    grid-template-columns: 50% 50%; /*para colocar el numero de columnas del contenedor y el porcentaje de espacio a ocupar*/
+    column-gap: 2rem; /*espacio de entre las dos columnas*/
+}
+
+.texto-nosotros h2{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0; /*eliminar margen*/
+    padding: 1rem 0 3rem 0;
+}
+
+/*anuncio*/
+.imagen-anuncio{
+    background-image: url(../img/destacada.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60rem;
+      
+}
+
+.contenedor-anuncio{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 2rem;
+    padding: 4rem 12rem 0 12rem
+}
+
+.texto-anuncio{
+    margin: 0;
+    padding: 3rem 12rem 3rem 12rem
+}
+
+/*Blog*/
+
+.blogs{
+    justify-content: space-between;
+    flex-basis: 60%;
+    padding: 3rem 23rem 3rem 23rem
+}
+
+/*entrada blog*/
+.imagen-piscina{
+    background-image: url(../img/destacada2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60rem;
+}
+
+.contenedor-blog{
+    margin: 0 0 0 0;
+    padding: 1rem 17rem 0 17rem
+}
+
+.texto-blog{
+    margin: 0;
+    padding: 0 17rem 1rem 17rem
+}
+
+/*Contacto*/
+label{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+legend{
+    font-size: 2rem;
+    color: #6d6161;
+}
+
+input:not([type="submit"]), textarea, select{ /*le aplica propiedadaes a todos los input, menos al tipo que se llame submit en este caso*/
+    padding: 1rem;
+    display: block;
+    width: 97%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;/*poner borde redondeado*/
+}
+textarea{
+    height: 20rem;
+}
+select{
+    width: 100%;
+}
+
+.contacto p{
+    font-size: 1.4rem;
+    color: #4f4f4f;
+}
+
+.forma-radios{
+    display: flex;
+    justify-content: space-between;
+    max-width: 30rem;
+    /*align-items: center;*/
+}
+
+input[type="radio"]{
+    width: auto;
+    margin-bottom: 0;
+    align-items: center;
+}
+
